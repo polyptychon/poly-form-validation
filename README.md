@@ -70,5 +70,21 @@ angular.module('myApp', ['poly-form-validation']);
 ## Documentation
 
 ```html
+<form-control class="col-md-6">
+  <label for="minLength4">Min Length</label>
+  <input name="minLength"
+    id="minLength4"
+    type="text"
+    placeholder="Min Length"
+    class="form-control"
+    ng-model="myForm.minLength"
+    ng-required="true" 
+    ng-minlength="3">
 
+  <valid-icon></valid-icon>
+  <loader-icon></loader-icon>
+  <error-message class="ng-required">Field is required</error-message>
+  <error-message class="ng-minlength">Please type more than 3 characters</error-message>
+
+</form-control>
 ```
