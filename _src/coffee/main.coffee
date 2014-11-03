@@ -1,8 +1,6 @@
 global.$ = global.jQuery = $ = require "jquery" unless jQuery
 require 'angular/angular' unless angular?
 
-require "bootstrap-datepicker/js/bootstrap-datepicker"
-
 module.exports =
   angular.module('poly-form-validation', [])
   .directive("formTabs",        require("./directives/form-tabs/FormTabs.coffee"))
