@@ -1,5 +1,4 @@
 if jQuery then $ = jQuery else $ = require "jquery"
-_ = require "lodash"
 formElements = require "../../utils/FormElements.coffee"
 requestAnimFrame = require "animationframe"
 
@@ -65,13 +64,13 @@ module.exports = () ->
           (index) ->
             element = $(@);
             control = form[element.attr("name")]
-            controls.push(control) unless _.contains(controls, control)
+            controls.push(control) unless controls.indexOf(control)>=0
             if (value)
               $(element).removeAttr('disabled')
             else
               $(element).attr('disabled', 'disabled')
         )
-        _.forEach(controls,
+        angular.forEach(controls,
         (control) ->
           return unless (control?)
           if (value)
