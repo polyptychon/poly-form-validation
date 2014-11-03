@@ -26,7 +26,7 @@ Add a stylesheet to your `index.html` head:
 Add a `<script>` to your `index.html`:
 
 ```html
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
 
 <script src="/node_modules/poly-form-validation/_lib/poly-form-validation.min.js"></script>
@@ -55,7 +55,7 @@ Add a stylesheet to your `index.html` head:
 Add a `<script>` to your `index.html`:
 
 ```html
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
 
 <script src="/bower_components/poly-form-validation/_lib/poly-form-validation.min.js"></script>
