@@ -8,7 +8,7 @@ html(ng-app="poly-form-validation")
         form-tabs
           form-tab(tab-title="Validation")
             .row
-              .col-md-12(ng-hide="hideCheckbox" disable-validation-when-hidden)
+              .col-md-12
                 form-control.col-md-6
                   label(for="validatePassword0") password
                   input(name="validatePassword" id="validatePassword0" ng-model="ValidationForm.validatePasswordValue" autocomplete="validatePassword" type="password" placeholder="password" value="test" ng-required="true" class="form-control")

@@ -1,3 +1,4 @@
+@import "spinner";
 
 .ng-animate-block-transitions {
   transition:0s all!important;
@@ -100,37 +101,6 @@
     }
     input:focus.ng-invalid {
       border-color: $state-danger-text;
-    }
-  }
-
-  .select2-container {
-    height: auto;
-    padding: 0px;
-    .select2-search-field {
-      height: 29px !important;
-    }
-    &.ng-valid .select2-choices {
-      padding-right: 30px;
-    }
-    &.ng-invalid .select2-choices {
-      padding-right: 5px;
-    }
-    .select2-chosen {
-      margin-right: 60px;
-    }
-    .select2-choice {
-      height: 31px;
-    }
-    .select2-default {
-      color: $input-color-placeholder !important;
-      text-shadow: none !important;
-    }
-    .select2-default .select2-chosen {
-      color: $input-color-placeholder !important;
-    }
-
-    input {
-      padding: 3px 12px;
     }
   }
 }
