@@ -1,6 +1,6 @@
 # Description
 
-A collection of directives for compining angular and bootstrap validation.
+A collection of directives for combining angular and bootstrap validation.
 
 # Requirements
 
