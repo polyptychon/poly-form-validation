@@ -97,7 +97,7 @@ angular.module('myApp', ['poly-form-validation']);
     type="text"
     placeholder="remoteValidation"
     class="form-control"
-    ng-model="remoteValidation11"
+    ng-model="myForm.remoteValidation"
     remote-validation="remoteValidation.json"
     ng-required="true">
 
@@ -105,6 +105,6 @@ angular.module('myApp', ['poly-form-validation']);
   <loader-icon></loader-icon>
   <error-message class="ng-required">Field is required</error-message>
   <error-message class="remote-validation">Remote Error</error-message>
-  
+
 </form-control>
 ```
