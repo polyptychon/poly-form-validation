@@ -244,6 +244,10 @@ gulp.task('fonts', function() {
   return gulp.src([SRC+'/fonts/**', MOCKUPS+"/fonts/*"])
     .pipe(gulp.dest(getOutputDir()+ASSETS+'/fonts'))
 });
+gulp.task('json', function() {
+  return gulp.src([SRC+'/json/**'])
+    .pipe(gulp.dest(getOutputDir()))
+});
 gulp.task('watch', function() {
   watching = true;
   livereload.listen();
@@ -300,7 +304,7 @@ gulp.task('default', ['vendor','coffee', 'sass', 'jade']);
 gulp.task('live', ['coffee', 'jade', 'sass', 'watch']);
 
 gulp.task('build', function() {
-  runSequence(['bootstrapFonts','fonts','images','spriteSass','autoVariables'],['coffee','vendor','sass'],['jade']);
+  runSequence(['bootstrapFonts','fonts','json','images','spriteSass','autoVariables'],['coffee','vendor','sass'],['jade']);
 });
 gulp.task('server', ['connect', 'watch']);
 gulp.task('production', function() {
