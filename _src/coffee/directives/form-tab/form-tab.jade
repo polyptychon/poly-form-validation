@@ -1,0 +1,8 @@
+.tab-pane(ng-class="{ active: selected }")
+  div(ng-transclude)
+  form-control(class="col-md-12", ng-hide="isLastPane()", ng-if="nextTabButtonLabel!=null")
+    button(type="button",
+           ng-click="selectNextPane()",
+           class="btn btn-primary",
+           ng-disabled="isPaneInValid",
+           ng-show="showNextButton") {{ nextTabButtonLabel }}
