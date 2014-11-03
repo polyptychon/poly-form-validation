@@ -1,0 +1,220 @@
+
+.ng-animate-block-transitions {
+  transition:0s all!important;
+  -webkit-transition:0s all!important;
+}
+
+/* show the element during a show/hide animation when the
+ * animation is ongoing, but the .ng-hide class is active */
+.ng-hide-add-active, .ng-hide-remove {
+  display: block!important;
+}
+
+.popover.top {
+  margin-top: -25px;
+}
+.app-form-help-block {
+
+  font-size : 12px;
+  margin-bottom: 20px;
+
+}
+.has-feedback {
+  .form-control-feedback {
+    top: $input-height-base * .68;
+    right: 20px;
+    display: none;
+    z-index: 20;
+  }
+  &.no-label {
+    .form-control-feedback {
+      top: 0px;
+    }
+  }
+  &.select {
+    .form-control-feedback {
+      right: 30px;
+    }
+    &:not(.select-multiple).select-clear .form-control-feedback {
+      right: 50px;
+    }
+    &:not(.select-multiple).select-clear .loader {
+      right: 55px;
+    }
+  }
+  &.select-multiple {
+    .form-control-feedback {
+      right: 20px;
+    }
+  }
+  .form-control {
+    padding-right: 12px;
+  }
+  &.has-success {
+    .form-control-feedback {
+      display: block;
+    }
+    .form-control:not(.select2-container) {
+      padding-right: 42.5px;
+    }
+  }
+  &:not(.ng-loading) .loader {
+    display: none;
+  }
+  &.ng-loading .valid-icon {
+    display: none;
+  }
+  .error-message {
+    display: none;
+    margin-top: 5px;
+    color: $brand-danger;
+  }
+  &.ng-dirty {
+    &.ng-invalid-required > .ng-required,
+    &.ng-invalid-validator > .ui-validate,
+    &.ng-invalid-pattern > .ng-pattern,
+    &.ng-invalid-email > .ng-email,
+    &.ng-invalid-number > .ng-number,
+    &.ng-invalid-maxlength > .ng-maxlength,
+    &.ng-invalid-minlength > .ng-minlength,
+    &.ng-invalid-url > .ng-url,
+    &.ng-invalid-is-unique > .is-unique,
+    &.ng-is-unique-loading > .is-unique-loading,
+    &.ng-is-unique-error-loading > .is-unique-error-loading,
+    &.ng-invalid-remote-validation > .remote-validation,
+    &.ng-remote-validation-loading > .remote-validation-loading,
+    &.ng-remote-validation-error-loading > .remote-validation-error-loading,
+    &.ng-loading > .loader,
+    &.ng-invalid-is-equal > .is-equal {
+      display: block;
+    }
+    //&.has-success > .loader,
+    &.ng-remote-validation-pending > .remote-validation,
+    &.ng-remote-validation-loading > .remote-validation,
+    &.ng-is-unique-pending > .is-unique,
+    &.ng-is-unique-loading > .is-unique {
+      display: none;
+    }
+    input:focus.ng-valid {
+      border-color: $state-success-text;
+    }
+    input:focus.ng-invalid {
+      border-color: $state-danger-text;
+    }
+  }
+
+  .select2-container {
+    height: auto;
+    padding: 0px;
+    .select2-search-field {
+      height: 29px !important;
+    }
+    &.ng-valid .select2-choices {
+      padding-right: 30px;
+    }
+    &.ng-invalid .select2-choices {
+      padding-right: 5px;
+    }
+    .select2-chosen {
+      margin-right: 60px;
+    }
+    .select2-choice {
+      height: 31px;
+    }
+    .select2-default {
+      color: $input-color-placeholder !important;
+      text-shadow: none !important;
+    }
+    .select2-default .select2-chosen {
+      color: $input-color-placeholder !important;
+    }
+
+    input {
+      padding: 3px 12px;
+    }
+  }
+}
+
+.form-container h1.form-tabs-header {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  font-size: 18px;
+  background: $gray-dark;
+  color: white;
+  padding: 10px 30px;
+  margin: 0px;
+  z-index: 2;
+  font-weight: normal;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -5px;
+    width: 10px;
+    height: 10px;
+    background: $brand-primary;
+    display: block;
+    transform: skewY(30deg);
+    z-index: 1;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 10px;
+    height: 10px;
+    background: $gray-dark;
+    display: block;
+    z-index: 2;
+  }
+  ul {
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
+.form-container {
+  background: $gray-lighter;
+  padding: 20px 20px;
+  padding-top: 80px;
+  margin-bottom: 40px;
+  position: relative;
+  .form-tabs-header {
+    .breadcrumb {
+      background: $gray-dark;
+      border-radius: 0px;
+      a {
+        color: $gray;
+      }
+      .active a {
+        color: white;
+      }
+
+    }
+
+    [role="tablist"] {
+      li.disabled a {
+        pointer-events: none;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  label {
+    font-weight: normal;
+  }
+
+  :not(.pen) > h2.form-header {
+    font-size: 14px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-weight: bold;
+    border-bottom: 1px solid $gray-light;
+  }
+}
