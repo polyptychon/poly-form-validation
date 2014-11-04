@@ -45,7 +45,7 @@ module.exports = ($parse) ->
       )
     )
     #controlElements.on("keyup input blur change click focus select2-opening", (e) ->
-    controlElements.on("select2-opening", (e) ->
+    controlElements.on("select2-opening input", (e) ->
       scope.copyChildClassesToParent($(@))
     )
 
