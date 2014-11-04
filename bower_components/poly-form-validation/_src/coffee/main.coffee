@@ -1,8 +1,11 @@
 global.$ = global.jQuery = $ = require "jquery" unless jQuery?
 require 'angular/angular' unless angular?
 
+require 'angular-ui-utils/modules/validate/validate'
+require 'angular-ui-utils/modules/mask/mask'
+
 module.exports =
-  angular.module('poly-form-validation', [])
+  angular.module('poly-form-validation', ['ui.validate','ui.mask'])
   .directive("formTabs",        require("./directives/form-tabs/FormTabs.coffee"))
   .directive("formTab",         require("./directives/form-tab/FormTab.coffee"))
   .directive("formGroup",       require("./directives/form-group/FormGroup.coffee"))
