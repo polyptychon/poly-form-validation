@@ -1,7 +1,7 @@
 # Description
 
 A collection of directives for combining angular and bootstrap validation.
-Demo: [http://polyptychon.github.io/poly-form-validation][http://polyptychon.github.io/poly-form-validation]
+Demo: [poly-form-validation][http://polyptychon.github.io/poly-form-validation]
 
 # Requirements
 
