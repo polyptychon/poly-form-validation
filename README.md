@@ -22,7 +22,7 @@ npm install --save polyptychon/poly-form-validation
 Add a stylesheet to your `index.html` head:
 ```html
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="/node_modules/poly-form-validation/_lib/css/poly-form-validation.css">
+<link rel="stylesheet" href="/node_modules/poly-form-validation/lib/css/poly-form-validation.css">
 ```
 
 Add a `<script>` to your `index.html`:
@@ -31,7 +31,7 @@ Add a `<script>` to your `index.html`:
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
 
-<script src="/node_modules/poly-form-validation/_lib/js/poly-form-validation.min.js"></script>
+<script src="/node_modules/poly-form-validation/lib/js/poly-form-validation.min.js"></script>
 ```
 
 Then add `poly-form-validation` as a dependency for your app:
@@ -51,7 +51,7 @@ bower install polyptychon/poly-form-validation
 Add a stylesheet to your `index.html` head:
 ```html
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="/bower_components/poly-form-validation/_lib/css/poly-form-validation.css">
+<link rel="stylesheet" href="/bower_components/poly-form-validation/lib/css/poly-form-validation.css">
 ```
 
 Add a `<script>` to your `index.html`:
@@ -60,7 +60,7 @@ Add a `<script>` to your `index.html`:
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
 
-<script src="/bower_components/poly-form-validation/_lib/js/poly-form-validation.min.js"></script>
+<script src="/bower_components/poly-form-validation/lib/js/poly-form-validation.min.js"></script>
 ```
 
 Then add `poly-form-validation` as a dependency for your app:
