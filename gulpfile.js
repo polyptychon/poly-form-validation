@@ -132,7 +132,7 @@ gulp.task('libjs', function() {
     .pipe(plumber({
       errorHandler: handleError
     }))
-    .pipe(myCoffee('_lib', 'poly-form-validation.min.js'));
+    .pipe(myCoffee('_lib/js', 'poly-form-validation.min.js'));
 
   gulp.src(dependencies)
     return browserify()
@@ -147,7 +147,7 @@ gulp.task('libjs', function() {
       .pipe(buffer())
       .pipe(gulpif(env === PRODUCTION, uglify()))
       .pipe(gulpif(env === PRODUCTION, size()))
-      .pipe(gulp.dest('_lib'));
+      .pipe(gulp.dest('_lib/js'));
 });
 
 gulp.task('libcss', function() {
@@ -160,7 +160,7 @@ gulp.task('libcss', function() {
     .pipe(sass(config).on('error', gutil.log))
     .pipe(gulpif(env === PRODUCTION, minifyCSS()))
     .pipe(gulpif(env === PRODUCTION, size()))
-    .pipe(gulp.dest('_lib'));
+    .pipe(gulp.dest('_lib/css'));
 });
 
 gulp.task('clean-js', function() {
