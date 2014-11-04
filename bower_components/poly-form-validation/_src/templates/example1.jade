@@ -1,0 +1,108 @@
+doctype html
+html(ng-app="poly-form-validation")
+  head
+    include partials/header
+  body
+    .container
+      form(name="ValidationForm" ng-cloak="true")
+        form-tabs
+          form-tab(tab-title="Validation")
+            .row
+              .col-md-12
+                form-control.col-md-6
+                  label(for="validatePassword0") password
+                  input(name="validatePassword" id="validatePassword0" ng-model="ValidationForm.validatePasswordValue" autocomplete="validatePassword" type="password" placeholder="password" value="test" ng-required="true" class="form-control")
+                  valid-icon
+                  loader-icon
+                  error-message.ng-required Field is required
+
+                form-control.col-md-6
+                  label(for="uiValidate1") ui-validate
+                  input(name="uiValidate" id="uiValidate1" ng-model="uiValidate1" autocomplete="uiValidate" type="password" placeholder="ui-validate" value="test" ui-validate="'$value==ValidationForm.validatePasswordValue'" ui-validate-watch="'ValidationForm.validatePasswordValue'" ng-required="true" class="form-control")
+                  valid-icon
+                  loader-icon
+                  error-message.ng-required Field is required
+                  error-message.ui-validate Validation failed
+
+              .col-md-12
+                form-control.col-md-6
+                  label(for="email2") Email
+                  input(name="email" id="email2" ng-model="email2" autocomplete="email" type="email" placeholder="Email" value="test" ng-required="true" class="form-control")
+                  valid-icon
+                  loader-icon
+                  error-message.ng-email Please type a correct email
+                  error-message.ng-required Field is required
+
+                form-control.col-md-6
+                  label(for="email2") Number
+                  input(name="number" id="number3" ng-model="number3" autocomplete="number" type="number" placeholder="number" value="13" ng-required="true" class="form-control")
+                  valid-icon
+                  loader-icon
+                  error-message.ng-required Field is required
+                  error-message.ng-number Please type a number
+
+              .col-md-12
+                form-control.col-md-6
+                  label(for="minLength4") Min Length
+                  input(name="minLength" id="minLength4" ng-model="minLength4" autocomplete="minLength" type="text" placeholder="Min Length" value="test" ng-required="true" ng-minlength="3" class="form-control")
+                  valid-icon
+                  loader-icon
+                  error-message.ng-required Field is required
+                  error-message.ng-minlength Please type more than 3 characters
+
+                form-control.col-md-6
+                  label(for="minLength4") Max Length
+                  input(name="maxlength" id="maxlength5" ng-model="maxlength5" autocomplete="maxlength" type="text" placeholder="Max length" value="test" ng-required="true" ng-maxlength="3" class="form-control")
+                  valid-icon
+                  loader-icon
+                  error-message.ng-required Field is required
+                  error-message.ng-maxlength Please type less than 3 characters
+
+              .col-md-12
+                form-control.col-md-6
+                  label(for="required6") Required false
+                  input(name="required" id="required6" ng-model="required6" autocomplete="required" type="text" placeholder="Required false" value="test" class="form-control")
+                  valid-icon
+
+                form-control.col-md-6
+                  label(for="mypattern7") Pattern
+                  input(name="mypattern" id="mypattern7" ng-model="mypattern7" autocomplete="mypattern" type="password" placeholder="Pattern" value="test" ng-required="true" ng-pattern="/((?=.*[a-z])(?=.*[A-Z]).{8,64})/" class="form-control")
+                  valid-icon
+                  loader-icon
+                  error-message.ng-required Field is required
+                  error-message.ng-pattern Ensure that value is 8 to 64 characters long and contains a mix of upper and lower case characters
+
+              .col-md-12
+                form-control.col-md-6
+                  label(for="isUnique8") isUnique
+                  input(name="isUnique" id="isUnique8" ng-model="isUnique8" autocomplete="isUnique" type="text" placeholder="isUnique" value="test" is-unique="isUnique.json" ng-required="true" class="form-control")
+                  valid-icon
+                  loader-icon
+                  error-message.is-uinique Please type a unique name
+                  error-message.ng-required Field is required
+
+                form-control.col-md-3
+                  label(for="ngchange9") ng change
+                  input(name="ngchange" id="ngchange9" ng-model="ValidationForm.ngchangeValue" autocomplete="ngchange" type="text" placeholder="ng change" value="test" ng-required="true" ng-change="ValidationForm.ngchange2Value=ValidationForm.ngchangeValue" class="form-control")
+                  valid-icon
+                  loader-icon
+                  error-message.ng-required Field is required
+
+                form-control.col-md-3
+                  label(for="ngchange210") ng change 2
+                  input(name="ngchange2" id="ngchange210" ng-model="ValidationForm.ngchange2Value" autocomplete="ngchange2" type="text" placeholder="ng change 2" value="test" ng-required="true" class="form-control")
+                  valid-icon
+                  loader-icon
+                  error-message.ng-required Field is required
+
+              .col-md-12
+                form-control.col-md-6
+                  label(for="remoteValidation11") remoteValidation
+                  input(name="remoteValidation" id="remoteValidation11" ng-model="remoteValidation11" autocomplete="remoteValidation" type="text" placeholder="remoteValidation" value="test" remote-validation="remoteValidation.json" ng-required="true" class="form-control")
+                  valid-icon
+                  loader-icon
+                  error-message.ng-required Field is required
+                  error-message.remote-validation Remote Error
+
+
+    include partials/footer
