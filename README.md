@@ -49,7 +49,7 @@ bower install polyptychon/poly-form-validation
 Add a stylesheet to your `index.html` head:
 ```html
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="/bower_components/poly-form-validation/_lib/poly-form-validation.css">
+<link rel="stylesheet" href="/bower_components/poly-form-validation/_lib/css/poly-form-validation.css">
 ```
 
 Add a `<script>` to your `index.html`:
