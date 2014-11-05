@@ -176,7 +176,7 @@ Allow you to add tabs to a form in combination with form-tabs as a parent elemen
 ```html
 <form name="ValidationForm">
   <form-tabs>
-    <form-tab tab-title="Register">
+    <form-tab tab-title="Register" directive-scope="$formTab">
       <div class="row">
         <form-control class="col-md-6">
           <label for="validatePassword0">password</label>
@@ -185,6 +185,9 @@ Allow you to add tabs to a form in combination with form-tabs as a parent elemen
           <loader-icon></loader-icon>
           <error-message class="ng-required">Field is required</error-message>
         </form-control>
+        <div class="col-md-12">
+          <button class="btn btn-primary" ng-disabled="$formTab.isPaneInValid" ng-click="$formTab.selectNextPane()">Next</button>
+        </div>
       </div>
     </form-tab>
     <form-tab tab-title="User">
