@@ -98,7 +98,11 @@ html(ng-app="poly-form-validation")
               .col-md-12
                 form-control.col-md-6
                   label(for="remoteValidation11") remoteValidation
-                  input(name="remoteValidation" id="remoteValidation11" ng-model="remoteValidation11" autocomplete="remoteValidation" type="text" placeholder="remoteValidation" value="test" remote-validation="remoteValidation.json" ng-required="true" class="form-control")
+                  input(name="remoteValidation" id="remoteValidation11" autocomplete="remoteValidation" type="text" placeholder="remoteValidation" value="test" ng-required="true" class="form-control"
+                    remote-validation="remoteValidation.json?value=:value"
+                    remote-validation-map-data="{value:ValidationForm.remoteValidation11}"
+                    ng-model="ValidationForm.remoteValidation11"
+                  )
                   valid-icon
                   loader-icon
                   error-message.ng-required Field is required
