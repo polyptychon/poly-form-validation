@@ -71,7 +71,7 @@ angular.module('myApp', ['poly-form-validation']);
 
 ## Documentation
 
-### Directives
+### Directives quick guide
 
 | Name                                      | Type   | Description |
 | :-------------------------------------    | :---:  | :----- |
@@ -88,12 +88,20 @@ angular.module('myApp', ['poly-form-validation']);
 | remoteValidation <br>`<input remote-validation= "remoteValidation.json">`              | A      | Use it to async validate input fields. In remote script you must return true if value is valid or error message|
 | disableValidationWhenHidden <br>`<div ng-show="false" disable-validation-when-hidden>` | A      | Disable form controls from validation and submission when hidden with angular directives `ng-show` `ng-hide` `ng-disabled`|
 
+### formTabs
+
+Use it to organize controls into tabs.
 
 #### formTabs attributes
 
 | Name                                      | Type   | Description |
 | :-------------------------------------    | :---:  | :----- |
 | select-form-tab-index                     | @      | allow you to change selected tab |
+
+
+### formTab
+
+Allow you to add tabs to a form in combination with form-tabs as a parent element. If you have more than one tab you can navigate to the next tab only when all form controls in the current tab are valid.
 
 #### formTab attributes
 
