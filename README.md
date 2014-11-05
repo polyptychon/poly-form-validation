@@ -105,6 +105,8 @@ angular.module('myApp', ['poly-form-validation']);
 | :-------------------------------------    | :---:  | :----- |
 | tab-title                                 | @      | Set the tab title label. |
 | next-tab-button-label                     | @      | Set next button label.|
+| show-next-button                          | @      | Show/hide next tab button.|
+| directive-scope                           | =      | Get directive controller in a variable |
 
 ### Example
 
