@@ -247,7 +247,7 @@ Use it to display bootstrap popover. http://getbootstrap.com/javascript/#popover
 | placement | @      | 'top'   | Sets popover title. |
 | delay     | @      | 0       | Delay showing and hiding the popover (ms) - does not apply to manual trigger type. If a number is supplied, delay is applied to both hide/show. Object structure is: delay: `{ "show": 500, "hide": 100 }` |
 | trigger   | @      | 'focus' | Sets popover title. |
-| viewport  | @      | { selector: 'body', padding: 0 } | Sets popover title. |
+| viewport  | @      | {selector: 'body', padding: 0} | Sets popover title. |
 
 ##### Example
 
