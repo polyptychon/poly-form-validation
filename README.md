@@ -286,7 +286,7 @@ Validation triggers when other validation in input are valid and after user stop
 | :-------  | :---   | :-----  | :-----      |
 | remote-validation              | String  | ''      | use a URL for validation |
 | remote-validation-map-data     | Object  | ''      | To do |
-| remote-validation-quiet-millis | Number  | 500     | To do |
+| remote-validation-quiet-millis | Number  | 500     | Time to trigger validation after user stops typing |
 | remote-validation-data-type    | String  | 'json'  | To do |
 
 
