@@ -75,7 +75,7 @@ angular.module('myApp', ['poly-form-validation']);
 
 | Name                | Description |
 | :------------------ | :----- |
-| formTabs            | Adding tabs to a form can make it more organized and easier to use, especially if the form contains many controls. By placing related controls on separate pages of the tab control, you can reduce clutter and make it easier to work with your data.   |
+| formTabs            | Adding tabs to a form can make it more organized and easier to use, especially if the form contains many controls. |
 | formTab             | Allow you to add tabs to a form in combination with form-tabs as a parent.  |
 | formControl         | Group a form control with other validation elements |
 | inputGroup          | Use it to replace bootstrap `<div class="input-group">` |
