@@ -305,7 +305,7 @@ Validation triggers when other validation in input are valid and after user stop
              placeholder="remoteValidation"
              value="test"
              remote-validation="remoteValidation.json?value=:value"
-             remote-validation-map-date="{ value:ValidationForm.remoteValidation11 }"
+             remote-validation-map-data="{ value:ValidationForm.remoteValidation11 }"
              ng-required="true"
              class="form-control">
 
