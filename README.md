@@ -86,7 +86,7 @@ angular.module('myApp', ['poly-form-validation']);
 | popover <br>`<popover>message</popover>`  | E      | Use it to display bootstrap popover. http://getbootstrap.com/javascript/#popovers |
 | uiValidate <br>`<input ui-validate=" '$value==myForm.value'">`                         | A      | Use it to validate input with expression. http://angular-ui.github.io/ui-utils/ |
 | remoteValidation <br>`<input remote-validation= "remoteValidation.json">`              | A      | Use it to async validate input fields. In remote script you must return true if value is valid or error message|
-| disableValidationWhenHidden <br>`<div ng-show="false" disable-validation-when-hidden>` | A      | Disable form controls from validation and submission when hidden with angular directives `ng-show` `ng-hide` `ng-disabled`|
+| disableValidationWhenHidden <br>`<div ng-show="false" disable-validation-when-hidden>` | A      | Disable nested form controls from validation and submission when hidden with angular directives `ng-show` `ng-hide` `ng-disabled`|
 
 ### formTabs
 
