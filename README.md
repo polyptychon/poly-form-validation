@@ -274,3 +274,46 @@ Use it to display bootstrap popover. http://getbootstrap.com/javascript/#popover
   </div>
 </form>
 ```
+
+### remoteValidation
+
+Use it to async validate input fields. In remote script you must return true if value is valid or error message
+
+##### Attributes
+
+| Name      | Type    | Default | Description |
+| :-------  | :---   | :-----  | :-----      |
+| remote-validation              | String  | ''      | use a URL for validation |
+| remote-validation-map-data     | Object  | ''      | To do |
+| remote-validation-quiet-millis | Number  | ''      | To do |
+| remote-validation-quiet-millis | Number  | 500     | To do |
+| remote-validation-data-type    | String  | 'json'  | To do |
+
+
+##### Example
+
+```html
+<form name="ValidationForm">
+  <div class="row">
+    <form-control class="col-md-6">
+      <label for="remoteValidation11">remoteValidation</label>
+      <input name="remoteValidation"
+             id="remoteValidation11"
+             ng-model="remoteValidation11"
+             autocomplete="remoteValidation"
+             type="text"
+             placeholder="remoteValidation"
+             value="test"
+             remote-validation="remoteValidation.json"
+             ng-required="true"
+             class="form-control">
+
+      <valid-icon></valid-icon>
+      <loader-icon></loader-icon>
+      <error-message class="ng-required">Field is required</error-message>
+      <error-message class="remote-validation">Remote Error</error-message>
+      
+    </form-control>
+  </div>
+</form>
+```
