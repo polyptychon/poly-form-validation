@@ -84,7 +84,7 @@ angular.module('myApp', ['poly-form-validation']);
 | loaderIcon <br>`<loader-icon>`            | E      | Use it inside `<form-control>` to display a loader icon inside an input field. |
 | errorMessage <br>`<error-message>`        | E      | Use it inside `<form-control>` to display error messages. You must add a class with the same name of angular validation directives. `<error-message class="ng-required">`. Error message show only when input has class `ng-dirty ng-invalid`. |
 | popover <br>`<input popover="message">`   | A      | Use it to display bootstrap popover. |
-| remoteValidation <br>`<input remote-validation= "remoteValidation.json">`| A      | Use it to async validate input fields. |
+| remoteValidation <br>`<input remote-validation= "remoteValidation.json">`| A      | Use it to async validate input fields. You must return true if value is valid or error message|
 | disableValidationWhenHidden <br>`<div ng-show="false" disable-validation-when-hidden>` | A      | Disable form controls from validation and submission when hidden with angular directives `ng-show` `ng-hide` `ng-disabled`|
 
 
