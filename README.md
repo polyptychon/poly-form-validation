@@ -75,13 +75,13 @@ angular.module('myApp', ['poly-form-validation']);
 
 | Name                                  | Description |
 | :-------------------------------------| :----- |
-| formTabs `<form-tabs>`                | Use it as an element to organize controls into tabs. |
-| formTab  `<form-tab>`                 | Allow you to add tabs to a form in combination with form-tabs as a parent. |
-| formControl `<form-control>`          | Group a form control with other validation elements. |
-| inputGroup `<input-group>`            | Use it to replace bootstrap `<div class="input-group">` |
-| inputGroupAddon `<input-group-addon>` | Use it to replace bootstrap `<div class="input-group-addon">` |
+| formTabs  `<form-tabs>`                | Use it as an element to organize controls into tabs. |
+| formTab   `<form-tab>`                 | Allow you to add tabs to a form in combination with form-tabs as a parent. |
+| formControl  `<form-control>`          | Group a form control with other validation elements. |
+| inputGroup  `<input-group>`            | Use it to replace bootstrap `<div class="input-group">` |
+| inputGroupAddon  `<input-group-addon>` | Use it to replace bootstrap `<div class="input-group-addon">` |
 | validIcon  `<valid-icon>`             | Use it to replace bootstrap `<span class="valid-icon glyphicon glyphicon-ok form-control-feedback"></span>` |
-| loaderIcon `<loader-icon>`            | Use it inside `<form-control>` to display a loader icon inside an input field. |
+| loaderIcon  `<loader-icon>`            | Use it inside `<form-control>` to display a loader icon inside an input field. |
 
 
 ### Example
