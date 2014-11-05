@@ -75,7 +75,7 @@ angular.module('myApp', ['poly-form-validation']);
 
 | Name                                      | Type   | Description |
 | :-------------------------------------    | :---:  | :----- |
-| formTabs <br>`<form-tabs>`                | E      | Use it as an element to organize controls into tabs. |
+| formTabs <br>`<form-tabs>`                | E      | Use it to organize controls into tabs. |
 | formTab  <br>`<form-tab>`                 | E      | Allow you to add tabs to a form in combination with form-tabs as a parent element. |
 | formControl <br>`<form-control>`          | E      | Group a form control with other validation elements. |
 | inputGroup <br>`<input-group>`            | E      | Use it to replace bootstrap `<div class="input-group">` |
