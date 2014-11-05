@@ -77,7 +77,7 @@ angular.module('myApp', ['poly-form-validation']);
 | :-------------------------------------    | :---:  | :----- |
 | formTabs <br>`<form-tabs>`                | E      | Use it to organize controls into tabs. |
 | formTab  <br>`<form-tab>`                 | E      | Allow you to add tabs to a form in combination with form-tabs as a parent element. |
-| formControl <br>`<form-control>`          | E      | Group a form control with other validation elements. |
+| formControl <br>`<form-control>`          | E      | Group a form control with other validation elements. Copies all ng classes from nested inputs with ng-model and allow you to display validation messages with css.|
 | inputGroup <br>`<input-group>`            | E      | Use it to replace bootstrap `<div class="input-group">` |
 | inputGroupAddon <br>`<input-group-addon>` | E      | Use it to replace bootstrap `<div class="input-group-addon">` |
 | validIcon <br>`<valid-icon>`              | E      | Use it to replace bootstrap `<span class="valid-icon glyphicon glyphicon-ok form-control-feedback"></span>` |
