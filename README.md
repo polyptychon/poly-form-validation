@@ -85,7 +85,7 @@ angular.module('myApp', ['poly-form-validation']);
 | errorMessage <br>`<error-message>`        | E      | Use it inside `<form-control>` to display error messages. You must add a class with the same name of angular validation directives. `<error-message class="ng-required">`. Error message show only when input has class `ng-dirty ng-invalid`. |
 | uiValidate <br>`<input ui-validate=" '$value==myForm.value'">`   | A      | Use it to validate input with expression. http://angular-ui.github.io/ui-utils/ |
 | popover <br>`<input popover="message">`   | A      | Use it to display bootstrap popover. http://getbootstrap.com/javascript/#popovers |
-| remoteValidation <br>`<input remote-validation= "remoteValidation.json">`| A      | Use it to async validate input fields. You must return true if value is valid or error message|
+| remoteValidation <br>`<input remote-validation= "remoteValidation.json">`| A      | Use it to async validate input fields. In remote script you must return true if value is valid or error message|
 | disableValidationWhenHidden <br>`<div ng-show="false" disable-validation-when-hidden>` | A      | Disable form controls from validation and submission when hidden with angular directives `ng-show` `ng-hide` `ng-disabled`|
 
 
