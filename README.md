@@ -126,7 +126,7 @@ Allow you to add tabs to a form in combination with form-tabs as a parent elemen
 ##### Attributes
 
 | Name                                      | Type    | Default   | Description |
-| :-------------------------------------    | :---:   | :-----    | :-----      |
+| :-------------------------------------    | :---    | :-----    | :-----      |
 | tab-title                                 | String  | 'Title'   | Set the tab title label. |
 | next-tab-button-label                     | String  | 'Next'    | Set next button label.|
 | show-next-button                          | Boolean | true      | Show/hide next tab button.|
