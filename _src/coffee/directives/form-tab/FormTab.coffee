@@ -41,6 +41,7 @@ module.exports = () ->
 
     attrs.$observe("nextTabButtonLabel", (value) ->
       scope.nextTabButtonLabel = value
+      scope.nextTabButtonLabel = "Next" unless (value?)
     )
 
     attrs.$observe("showNextButton", (value) ->

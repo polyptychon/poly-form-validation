@@ -92,21 +92,21 @@ angular.module('myApp', ['poly-form-validation']);
 
 ##### Attributes
 
-| Name                                      | Type   | Description |
-| :-------------------------------------    | :---:  | :----- |
-| select-form-tab-index                     | @      | allow you to change selected tab |
+| Name                                      | Type   | Default | Description |
+| :-------------------------------------    | :---:  | :-----  | | :-----    |
+| select-form-tab-index                     | @      | 0       |allow you to change selected tab |
 
 
 ### formTab
 
 ##### Attributes
 
-| Name                                      | Type   | Description |
-| :-------------------------------------    | :---:  | :----- |
-| tab-title                                 | @      | Set the tab title label. |
-| next-tab-button-label                     | @      | Set next button label.|
-| show-next-button                          | @      | Show/hide next tab button.|
-| directive-scope                           | =      | Get directive controller in a variable |
+| Name                                      | Type   | Default | Description |
+| :-------------------------------------    | :---:  | :-----  | :-----      |
+| tab-title                                 | @      | 'Title' | Set the tab title label. |
+| next-tab-button-label                     | @      | 'Next'  | Set next button label.|
+| show-next-button                          | @      | true    | Show/hide next tab button.|
+| directive-scope                           | =      |         | Get directive controller in a variable |
 
 ### Example
 
