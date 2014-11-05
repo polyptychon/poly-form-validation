@@ -128,6 +128,38 @@ angular.module('myApp', ['poly-form-validation']);
 | show-next-button                          | @      | true    | Show/hide next tab button.|
 | directive-scope                           | =      |         | Get directive controller in a variable |
 
+##### Example
+
+```html
+<form name="ValidationForm">
+  <form-tabs>
+    <form-tab tab-title="Register">
+      <div class="row">
+        <form-control class="col-md-6">
+          <label for="validatePassword0">password</label>
+          <input name="validatePassword" id="validatePassword0" ng-model="ValidationForm.validatePasswordValue" autocomplete="validatePassword" type="password" placeholder="password" value="test" ng-required="true" class="form-control">
+          <valid-icon></valid-icon>
+          <loader-icon></loader-icon>
+          <error-message class="ng-required">Field is required</error-message>
+        </form-control>
+      </div>
+    </form-tab>
+    <form-tab tab-title="User">
+      <div class="row">
+        <form-control class="col-md-6">
+          <label for="uiValidate1">ui-validate</label>
+          <input name="uiValidate" id="uiValidate1" ng-model="uiValidate1" autocomplete="uiValidate" type="password" placeholder="ui-validate" value="test" ui-validate="'$value==ValidationForm.validatePasswordValue'" ui-validate-watch="'ValidationForm.validatePasswordValue'" ng-required="true" class="form-control">
+          <valid-icon></valid-icon>
+          <loader-icon></loader-icon>
+          <error-message class="ng-required">Field is required</error-message>
+          <error-message class="ui-validate">Validation failed</error-message>
+        </form-control>
+      </div>
+    </form-tab>
+  </form-tabs>
+</form>
+```
+
 ### Example
 
 ```html
