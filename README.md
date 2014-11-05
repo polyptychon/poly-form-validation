@@ -132,7 +132,7 @@ Allow you to add tabs to a form in combination with form-tabs as a parent elemen
 | show-next-button                          | Boolean | true      | Show/hide next tab button.|
 | directive-scope                           | String  | undefined | Get directive controller in a variable |
 
-##### Directive scope methods
+##### Directive scope methods and properties
 
 | Name                      | type        | Description |
 | :-------------------------| :-----      | :-----      |
