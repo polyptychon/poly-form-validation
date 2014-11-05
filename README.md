@@ -130,14 +130,10 @@ angular.module('myApp', ['poly-form-validation']);
 
 ##### Directive scope methods
 
-| Name                      | Description |
-| :-------------------------| :-----      |
-| getNextPane               | Get next tab controller. |
-| selectNextPane            | Select next tab. |
-| isLastPane                | Returns true if is last tab. |
-| addPane                   | Add a new tab. |
-| addPaneAt                 | Add a new tab at index. |
-| removePane                | Remove tab. |
+| Name                      | type        | Description |
+| :-------------------------| :-----      | :-----      |
+| isPaneInValid             | property    | Return if tab is invalid. |
+| selectNextPane            | method      | Selects next tab. |
 
 ##### Example
 
