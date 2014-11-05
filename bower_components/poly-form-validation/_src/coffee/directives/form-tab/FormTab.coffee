@@ -41,6 +41,7 @@ module.exports = () ->
 
     attrs.$observe("nextTabButtonLabel", (value) ->
       scope.nextTabButtonLabel = value
+      scope.nextTabButtonLabel = "Next" unless (value?)
     )
 
     attrs.$observe("showNextButton", (value) ->
@@ -100,22 +101,22 @@ module.exports = () ->
       '$element'
       ($scope, $element) ->
         $scope.disabled = true
-        $scope.isPaneInValid = true
+        $scope.isPaneInvalid = true
 
         formControls = $scope.formControls = []
 
         isPaneValid = () ->
           nextPane = $scope.getNextPane()
-          $scope.isPaneInValid = false
+          $scope.isPaneInvalid = false
           enabledElements = formElements.split(", ").join(":enabled, ") + ":enabled"
           $($element).find(enabledElements).each(() ->
-            $scope.isPaneInValid = true if ($(@).hasClass("ng-invalid"))
+            $scope.isPaneInvalid = true if ($(@).hasClass("ng-invalid"))
           )
 
-          nextPane.disabled = $scope.isPaneInValid if (nextPane)
+          nextPane.disabled = $scope.isPaneInvalid if (nextPane)
           $scope.$digest()
 
-          return $scope.isPaneInValid
+          return $scope.isPaneInvalid
 
         $scope.$evalAsync(() ->
           requestAnimFrame ( () ->
