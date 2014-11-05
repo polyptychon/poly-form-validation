@@ -125,12 +125,12 @@ Allow you to add tabs to a form in combination with form-tabs as a parent elemen
 
 ##### Attributes
 
-| Name                                      | Type   | Default | Description |
-| :-------------------------------------    | :---:  | :-----  | :-----      |
-| tab-title                                 | @      | 'Title' | Set the tab title label. |
-| next-tab-button-label                     | @      | 'Next'  | Set next button label.|
-| show-next-button                          | @      | true    | Show/hide next tab button.|
-| directive-scope                           | =      |         | Get directive controller in a variable |
+| Name                                      | Type    | Default | Description |
+| :-------------------------------------    | :---:   | :-----  | :-----      |
+| tab-title                                 | String  | 'Title' | Set the tab title label. |
+| next-tab-button-label                     | String  | 'Next'  | Set next button label.|
+| show-next-button                          | Boolean | true    | Show/hide next tab button.|
+| directive-scope                           | String  |         | Get directive controller in a variable |
 
 ##### Directive scope methods
 
@@ -215,7 +215,7 @@ Group a form control with other validation elements. Copies all ng classes from 
 ##### Attributes
 
 | Name    | Type   | Default | Description |
-| :-------| :---:  | :-----  | :-----      |
+| :-------| :---   | :-----  | :-----      |
 | type    | String | 'form-group' | Sets element class. |
 
 ##### Example
