@@ -212,6 +212,12 @@ Allow you to add tabs to a form in combination with form-tabs as a parent elemen
 
 Group a form control with other validation elements. Copies all ng classes from nested inputs with ng-model and allow you to display validation messages with css.
 
+##### Attributes
+
+| Name    | Type   | Default | Description |
+| :-------| :---:  | :-----  | :-----      |
+| type    | @      | 'form-group' | Sets element class. |
+
 ##### Example
 
 ```html
