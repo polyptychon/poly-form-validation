@@ -277,7 +277,8 @@ Use it to display bootstrap popover. http://getbootstrap.com/javascript/#popover
 
 ### remoteValidation
 
-Use it to async validate input fields. In remote script you must return true if value is valid or error message
+Use it to async validate input fields. In remote script you must return true if value is valid or error message.
+Validation triggers when other validation in input are valid and after user stops typing (500 milliseconds default value)
 
 ##### Attributes
 
@@ -285,7 +286,6 @@ Use it to async validate input fields. In remote script you must return true if 
 | :-------  | :---   | :-----  | :-----      |
 | remote-validation              | String  | ''      | use a URL for validation |
 | remote-validation-map-data     | Object  | ''      | To do |
-| remote-validation-quiet-millis | Number  | ''      | To do |
 | remote-validation-quiet-millis | Number  | 500     | To do |
 | remote-validation-data-type    | String  | 'json'  | To do |
 
@@ -312,7 +312,7 @@ Use it to async validate input fields. In remote script you must return true if 
       <loader-icon></loader-icon>
       <error-message class="ng-required">Field is required</error-message>
       <error-message class="remote-validation">Remote Error</error-message>
-      
+
     </form-control>
   </div>
 </form>
