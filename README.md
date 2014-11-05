@@ -82,7 +82,7 @@ angular.module('myApp', ['poly-form-validation']);
 | inputGroupAddon <br>`<input-group-addon>` | E      | Use it to replace bootstrap `<div class="input-group-addon">` |
 | validIcon <br>`<valid-icon>`              | E      | Use it to replace bootstrap `<span class="valid-icon glyphicon glyphicon-ok form-control-feedback"></span>` |
 | loaderIcon <br>`<loader-icon>`            | E      | Use it inside `<form-control>` to display a loader icon inside an input field. |
-| disableValidationWhenHidden               | A      | Disable form controls from controls validation when hidden with angular directives `ng-show` `ng-hide` `ng-disabled`|
+| disableValidationWhenHidden <br>`<div ng-show="false" disable-validation-when-hidden>` | A      | Disable form controls from controls validation when hidden with angular directives `ng-show` `ng-hide` `ng-disabled`|
 
 
 ### Example
