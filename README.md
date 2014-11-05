@@ -128,6 +128,17 @@ angular.module('myApp', ['poly-form-validation']);
 | show-next-button                          | @      | true    | Show/hide next tab button.|
 | directive-scope                           | =      |         | Get directive controller in a variable |
 
+##### Directive scope methods
+
+| Name                      | Description |
+| :-------------------------| :-----      |
+| getNextPane               | Get next tab controller. |
+| selectNextPane            | Select next tab. |
+| isLastPane                | Returns true if is last tab. |
+| addPane                   | Add a new tab. |
+| addPaneAt                 | Add a new tab at index. |
+| removePane                | Remove tab. |
+
 ##### Example
 
 ```html
