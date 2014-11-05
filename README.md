@@ -299,34 +299,6 @@ Validation triggers when other validation in input are valid and after user stop
       <label for="remoteValidation11">remoteValidation</label>
       <input name="remoteValidation"
              id="remoteValidation11"
-             ng-model="remoteValidation11"
-             autocomplete="remoteValidation"
-             type="text"
-             placeholder="remoteValidation"
-             value="test"
-             remote-validation="remoteValidation.json"
-             ng-required="true"
-             class="form-control">
-
-      <valid-icon></valid-icon>
-      <loader-icon></loader-icon>
-      <error-message class="ng-required">Field is required</error-message>
-      <error-message class="remote-validation">Remote Error</error-message>
-
-    </form-control>
-  </div>
-</form>
-```
-
-##### Example map data
-
-```html
-<form name="ValidationForm">
-  <div class="row">
-    <form-control class="col-md-6">
-      <label for="remoteValidation11">remoteValidation</label>
-      <input name="remoteValidation"
-             id="remoteValidation11"
              ng-model="ValidationForm.remoteValidation11"
              autocomplete="remoteValidation"
              type="text"
