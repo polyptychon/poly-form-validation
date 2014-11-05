@@ -241,6 +241,7 @@ Use it to display bootstrap popover. http://getbootstrap.com/javascript/#popover
 
 | Name      | Type    | Default | Description |
 | :-------  | :---   | :-----  | :-----      |
+| prevent-close-on-popover-click | Boolean | false | Prevents popover to close when clicked inside |
 | title     | String  | ''      | Sets popover title. |
 | animation | Boolean | 'true'  | Apply a CSS fade transition to the popover |
 | container | String  | null    | Appends the popover to a specific element. Example: container: 'body'. This option is particularly useful in that it allows you to position the popover in the flow of the document near the triggering element - which will prevent the popover from floating away from the triggering element during a window resize. |

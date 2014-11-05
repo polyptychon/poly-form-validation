@@ -7,7 +7,7 @@ module.exports = () ->
   template: require './popover.jade'
   replace: false
   scope:
-    preventCloseOnPopOverClick: '@'
+    preventCloseOnPopoverClick: '@'
     title:      '@'
     animation:  '@'
     container:  '@'
@@ -40,7 +40,7 @@ module.exports = () ->
       }
     )
 
-    if (attrs.preventCloseOnPopOverClick=="true")
+    if (attrs.preventCloseOnPopoverClick=="true")
       formControl.bind(attrs.trigger || "focus", () ->
         formControl.parent().find(".popover").bind("mousedown", () ->
           formControl.bind("hide.bs.popover", cancelPopOverClose)
