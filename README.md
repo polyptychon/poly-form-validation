@@ -246,7 +246,7 @@ Use it to display bootstrap popover. http://getbootstrap.com/javascript/#popover
 | container | @      | null    | Appends the popover to a specific element. Example: container: 'body'. This option is particularly useful in that it allows you to position the popover in the flow of the document near the triggering element - which will prevent the popover from floating away from the triggering element during a window resize. |
 | placement | @      | 'top'   | Sets popover title. |
 | delay     | @      | 0       | Delay showing and hiding the popover (ms) - does not apply to manual trigger type. If a number is supplied, delay is applied to both hide/show. Object structure is: delay: `{ "show": 500, "hide": 100 }` |
-| trigger   | @      | 'focus' | How popover is triggered - `click | hover | focus |` manual. You may pass multiple triggers; separate them with a space. |
+| trigger   | @      | 'focus' | How popover is triggered - `click | hover | focus | manual`. You may pass multiple triggers; separate them with a space. |
 | viewport  | @      | {selector: 'body', padding: 0} | Keeps the popover within the bounds of this element. Example: viewport: `'#viewport'` or `{ "selector": "#viewport", "padding": 0 }` |
 
 ##### Example
