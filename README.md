@@ -96,6 +96,28 @@ angular.module('myApp', ['poly-form-validation']);
 | :-------------------------------------    | :---:  | :-----  | :-----      |
 | select-form-tab-index                     | @      | 0       | allow you to change selected tab |
 
+##### Example
+
+```html
+<form name="ValidationForm">
+  <form-tabs>
+    <form-tab tab-title="Validation">
+      <div class="row">
+        <div class="col-md-12">
+          <form-control class="col-md-6">
+            <label for="validatePassword0">password</label>
+            <input name="validatePassword" id="validatePassword0" ng-model="ValidationForm.validatePasswordValue" autocomplete="validatePassword" type="password" placeholder="password" value="test" ng-required="true" class="form-control">
+            <valid-icon></valid-icon>
+            <loader-icon></loader-icon>
+            <error-message class="ng-required">Field is required</error-message>
+          </form-control>
+        </div>
+      </div>
+    </form-tab>
+  </form-tabs>
+</form>
+```
+
 
 ### formTab
 
