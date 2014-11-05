@@ -93,8 +93,8 @@ angular.module('myApp', ['poly-form-validation']);
 ##### Attributes
 
 | Name                                      | Type   | Default | Description |
-| :-------------------------------------    | :---:  | :-----  | | :-----    |
-| select-form-tab-index                     | @      | 0       |allow you to change selected tab |
+| :-------------------------------------    | :---:  | :-----  | :-----      |
+| select-form-tab-index                     | @      | 0       | allow you to change selected tab |
 
 
 ### formTab
