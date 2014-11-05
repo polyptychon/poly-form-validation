@@ -76,7 +76,7 @@ angular.module('myApp', ['poly-form-validation']);
 | Name                                      | Type   | Description |
 | :-------------------------------------    | :---:  | :----- |
 | formTabs <br>`<form-tabs>`                       | E      | Use it to organize controls into tabs.
-| formTab  <br>`<form-tab tab-title="Validation">` | E      | Allow you to add tabs to a form in combination with form-tabs as a parent element. If you have more than one tab you can navigate to the next tab only when all form controls in the current tab are valid.
+| formTab  <br>`<form-tab tab-title="Validation">` | E      | Allow you to add tabs to a form in combination with form-tabs as a parent element. If you have more than one tab you can navigate to the next tab only when all form controls in the current tab are valid. |
 | formControl <br>`<form-control>`          | E      | Group a form control with other validation elements. Copies all ng classes from nested inputs with ng-model and allow you to display validation messages with css.|
 | inputGroup <br>`<input-group>`            | E      | Use it to replace bootstrap `<div class="input-group">` http://getbootstrap.com/css/#forms-inline |
 | inputGroupAddon <br>`<input-group-addon>` | E      | Use it to replace bootstrap `<div class="input-group-addon">` http://getbootstrap.com/css/#forms-inline |
@@ -89,6 +89,8 @@ angular.module('myApp', ['poly-form-validation']);
 | disableValidationWhenHidden <br>`<div ng-show="false" disable-validation-when-hidden>` | A      | Disable form controls from validation and submission when hidden with angular directives `ng-show` `ng-hide` `ng-disabled`|
 
 ### formTabs
+
+Use it to organize controls into tabs.
 
 ##### Attributes
 
@@ -119,6 +121,8 @@ angular.module('myApp', ['poly-form-validation']);
 
 ### formTab
 
+Allow you to add tabs to a form in combination with form-tabs as a parent element. If you have more than one tab you can navigate to the next tab only when all form controls in the current tab are valid.
+
 ##### Attributes
 
 | Name                                      | Type   | Default | Description |
@@ -136,6 +140,38 @@ angular.module('myApp', ['poly-form-validation']);
 | selectNextPane            | method      | Selects next tab. |
 
 ##### Example
+
+```html
+<form name="ValidationForm">
+  <form-tabs>
+    <form-tab tab-title="Register">
+      <div class="row">
+        <form-control class="col-md-6">
+          <label for="validatePassword0">password</label>
+          <input name="validatePassword" id="validatePassword0" ng-model="ValidationForm.validatePasswordValue" autocomplete="validatePassword" type="password" placeholder="password" value="test" ng-required="true" class="form-control">
+          <valid-icon></valid-icon>
+          <loader-icon></loader-icon>
+          <error-message class="ng-required">Field is required</error-message>
+        </form-control>
+      </div>
+    </form-tab>
+    <form-tab tab-title="User">
+      <div class="row">
+        <form-control class="col-md-6">
+          <label for="uiValidate1">ui-validate</label>
+          <input name="uiValidate" id="uiValidate1" ng-model="uiValidate1" autocomplete="uiValidate" type="password" placeholder="ui-validate" value="test" ui-validate="'$value==ValidationForm.validatePasswordValue'" ui-validate-watch="'ValidationForm.validatePasswordValue'" ng-required="true" class="form-control">
+          <valid-icon></valid-icon>
+          <loader-icon></loader-icon>
+          <error-message class="ng-required">Field is required</error-message>
+          <error-message class="ui-validate">Validation failed</error-message>
+        </form-control>
+      </div>
+    </form-tab>
+  </form-tabs>
+</form>
+```
+
+##### Example with directive scope
 
 ```html
 <form name="ValidationForm">
