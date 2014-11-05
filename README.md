@@ -208,3 +208,22 @@ Allow you to add tabs to a form in combination with form-tabs as a parent elemen
 </form>
 ```
 
+### formControl
+
+Group a form control with other validation elements. Copies all ng classes from nested inputs with ng-model and allow you to display validation messages with css.
+
+##### Example
+
+```html
+<form name="ValidationForm">
+  <div class="row">
+    <form-control class="col-md-6">
+      <label for="validatePassword0">password</label>
+      <input name="validatePassword" id="validatePassword0" ng-model="ValidationForm.validatePasswordValue" autocomplete="validatePassword" type="password" placeholder="password" value="test" ng-required="true" class="form-control">
+      <valid-icon></valid-icon>
+      <loader-icon></loader-icon>
+      <error-message class="ng-required">Field is required</error-message>
+    </form-control>
+  </div>
+</form>
+```
