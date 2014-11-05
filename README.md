@@ -186,7 +186,9 @@ Allow you to add tabs to a form in combination with form-tabs as a parent elemen
           <error-message class="ng-required">Field is required</error-message>
         </form-control>
         <div class="col-md-12">
-          <button class="btn btn-primary" ng-disabled="$formTab.isPaneInValid" ng-click="$formTab.selectNextPane()">Next</button>
+          <button class="btn btn-primary"
+            ng-disabled="$formTab.isPaneInValid"
+            ng-click="$formTab.selectNextPane()">Next</button>
         </div>
       </div>
     </form-tab>
