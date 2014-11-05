@@ -90,9 +90,7 @@ angular.module('myApp', ['poly-form-validation']);
 
 ### formTabs
 
-Use it to organize controls into tabs.
-
-#### formTabs attributes
+##### Attributes
 
 | Name                                      | Type   | Description |
 | :-------------------------------------    | :---:  | :----- |
@@ -101,9 +99,7 @@ Use it to organize controls into tabs.
 
 ### formTab
 
-Allow you to add tabs to a form in combination with form-tabs as a parent element. If you have more than one tab you can navigate to the next tab only when all form controls in the current tab are valid.
-
-#### formTab attributes
+##### Attributes
 
 | Name                                      | Type   | Description |
 | :-------------------------------------    | :---:  | :----- |
