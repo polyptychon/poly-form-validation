@@ -216,7 +216,7 @@ Group a form control with other validation elements. Copies all ng classes from 
 
 | Name    | Type   | Default | Description |
 | :-------| :---:  | :-----  | :-----      |
-| type    | @      | 'form-group' | Sets element class. |
+| type    | String | 'form-group' | Sets element class. |
 
 ##### Example
 
@@ -240,7 +240,7 @@ Use it to display bootstrap popover. http://getbootstrap.com/javascript/#popover
 ##### Attributes
 
 | Name      | Type    | Default | Description |
-| :-------  | :---:   | :-----  | :-----      |
+| :-------  | :---   | :-----  | :-----      |
 | title     | String  | ''      | Sets popover title. |
 | animation | Boolean | 'true'  | Apply a CSS fade transition to the popover |
 | container | String  | null    | Appends the popover to a specific element. Example: container: 'body'. This option is particularly useful in that it allows you to position the popover in the flow of the document near the triggering element - which will prevent the popover from floating away from the triggering element during a window resize. |
