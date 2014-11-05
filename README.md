@@ -239,9 +239,15 @@ Use it to display bootstrap popover. http://getbootstrap.com/javascript/#popover
 
 ##### Attributes
 
-| Name    | Type   | Default | Description |
-| :-------| :---:  | :-----  | :-----      |
-| type    | @      | 'form-group' | Sets element class. |
+| Name      | Type   | Default | Description |
+| :-------  | :---:  | :-----  | :-----      |
+| title     | @      | ''      | Sets popover title. |
+| animation | @      | ''      | Sets popover title. |
+| container | @      | ''      | Sets popover title. |
+| placement | @      | ''      | Sets popover title. |
+| delay     | @      | ''      | Sets popover title. |
+| trigger   | @      | ''      | Sets popover title. |
+| viewport  | @      | ''      | Sets popover title. |
 
 ##### Example
 
@@ -250,7 +256,7 @@ Use it to display bootstrap popover. http://getbootstrap.com/javascript/#popover
   <div class="row">
     <form-control class="col-md-6">
       <label for="validatePassword0">password</label>
-      <input name="validatePassword" popover="Please type a password"
+      <input name="validatePassword"
           id="validatePassword0"
           ng-model="ValidationForm.validatePasswordValue"
           autocomplete="validatePassword"
@@ -259,6 +265,7 @@ Use it to display bootstrap popover. http://getbootstrap.com/javascript/#popover
           value="test"
           ng-required="true"
           class="form-control">
+      <popover>Please type a password</popover>
       <valid-icon></valid-icon>
       <loader-icon></loader-icon>
       <error-message class="ng-required">Field is required</error-message>
