@@ -75,13 +75,13 @@ angular.module('myApp', ['poly-form-validation']);
 
 | Name                | Description |
 | ------------------- | :----- |
-| form-tabs           | Adding tabs to a form can make it more organized and easier to use, especially if the form contains many controls. By placing related controls on separate pages of the tab control, you can reduce clutter and make it easier to work with your data.   |
-| form-tab            | Allow you to add tabs to a form in combination with form-tabs as a parent.  |
-| form-control        | Group a form control with other validation elements |
-| input-group         | Use it to replace bootstrap `<div class="input-group">` |
-| input-group-addon   | Use it to replace bootstrap `<div class="input-group-addon">` |
-| valid-icon          | Use it to replace bootstrap `<span class="valid-icon glyphicon glyphicon-ok form-control-feedback"></span>` |
-| loader-icon         | Use it inside `<form-control>` to display a loader icon inside an input field. |
+| formTabs            | Adding tabs to a form can make it more organized and easier to use, especially if the form contains many controls. By placing related controls on separate pages of the tab control, you can reduce clutter and make it easier to work with your data.   |
+| formTab             | Allow you to add tabs to a form in combination with form-tabs as a parent.  |
+| formControl         | Group a form control with other validation elements |
+| inputGroup          | Use it to replace bootstrap `<div class="input-group">` |
+| inputGroupAddon     | Use it to replace bootstrap `<div class="input-group-addon">` |
+| validIcon           | Use it to replace bootstrap `<span class="valid-icon glyphicon glyphicon-ok form-control-feedback"></span>` |
+| loaderIcon          | Use it inside `<form-control>` to display a loader icon inside an input field. |
 
 
 ### Example
