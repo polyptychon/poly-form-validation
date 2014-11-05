@@ -136,7 +136,7 @@ Allow you to add tabs to a form in combination with form-tabs as a parent elemen
 
 | Name                      | type        | Description |
 | :-------------------------| :-----      | :-----      |
-| isPaneInValid             | property    | Return if tab is invalid. |
+| isPaneInvalid             | property    | Return if tab is invalid. |
 | selectNextPane            | method      | Selects next tab. |
 
 ##### Example
