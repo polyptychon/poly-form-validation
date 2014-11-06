@@ -10,6 +10,8 @@ module.exports = ($timeout, $http) ->
     timeoutPromise = null
     timeoutDigest = -1
     quietMillis = if (attrs.remoteValidationQuietMillis != null && !isNaN(attrs.remoteValidationQuietMillis)) then attrs.remoteValidationQuietMillis else 500
+    isValidPath = attrs.remoteValidationIsValidPath || null
+    errorMessagePath = attrs.remoteValidationErrorMessagePath || null
     name = "remote-validation"
 
     scope.$watch(
@@ -39,7 +41,7 @@ module.exports = ($timeout, $http) ->
 
         timeoutPromise = $timeout(
           () ->
-            url = mapDataToURL(attrs.remoteValidation, attrs.remoteValidationMapData, scope)
+            url = mapDataToURL(attrs.remoteValidation, attrs.remoteValidationMapData, scope.$parent)
             dataType = attrs.remoteValidationDataType || "json"
 
             if (dataType == "jsonp")
@@ -71,13 +73,25 @@ module.exports = ($timeout, $http) ->
               .then(() ->
                 onDefault()
               )
+            getObjectFromPath = (object, path) ->
+              if path?
+                paths = path.split(".")
+                a = object
+                angular.forEach(paths, (path) ->
+                  a = a[path]
+                )
+                return a
+              else
+                return object
 
             onSuccess =
               (data) ->
                 elm.removeClass("ng-#{name}-error-loading")
                 return unless (data?)
-                $(elm).parent().find(".error-message.remote-validation").html(data) if data!=true
-                validatorFn(newValue, data==true)
+                isValid = getObjectFromPath(data, isValidPath)
+                errorMessage = getObjectFromPath(data, errorMessagePath)
+                $(elm).parent().find(".error-message.remote-validation").html(errorMessage) if isValid!=true
+                validatorFn(newValue, isValid==true)
                 update()
 
             onError =

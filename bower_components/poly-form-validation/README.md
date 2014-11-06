@@ -75,7 +75,7 @@ angular.module('myApp', ['poly-form-validation']);
 
 | Name                                      | Type   | Description |
 | :-------------------------------------    | :---:  | :----- |
-| formTabs <br>`<form-tabs>`                       | E      | Use it to organize controls into tabs.
+| formTabs <br>`<form-tabs>`                       | E      | Use it to organize controls inside tabs.
 | formTab  <br>`<form-tab tab-title="Validation">` | E      | Allow you to add tabs to a form in combination with form-tabs as a parent element. If you have more than one tab you can navigate to the next tab only when all form controls in the current tab are valid. |
 | formControl <br>`<form-control>`          | E      | Group a form control with other validation elements. Copies all ng classes from nested inputs with ng-model and allow you to display validation messages with css.|
 | inputGroup <br>`<input-group>`            | E      | Use it to replace bootstrap `<div class="input-group">` http://getbootstrap.com/css/#forms-inline |
@@ -282,12 +282,14 @@ Validation triggers when other validation in input are valid and after user stop
 
 ##### Attributes
 
-| Name      | Type    | Default | Description |
-| :-------  | :---   | :-----  | :-----      |
-| remote-validation              | String  | ''      | A URL to validate input value |
-| remote-validation-map-data     | Object  | ''      | Mapping data from an object to url. See example bellow |
-| remote-validation-quiet-millis | Number  | 500     | How much time after user stops typing to trigger validation |
-| remote-validation-data-type    | String  | 'json'  | JSON or JSONP |
+| Name      | Type    | Default        | Description |
+| :-------  | :---   | :-----          | :-----      |
+| remote-validation                    | String  | ''      | A URL to validate input value |
+| remote-validation-map-data           | Object  | ''      | Mapping data from an object to url. See example bellow |
+| remote-validation-quiet-millis       | Number  | 500     | How much time after user stops typing to trigger validation |
+| remote-validation-data-type          | String  | 'json'  | JSON or JSONP |
+| remote-validation-is-valid-path      | String  | ''      | In the returned JSON object we can specify the path to validation boolean value |
+| remote-validation-error-message-path | String  | ''      | In the returned JSON object we can specify the path to error message |
 
 
 ##### Example
@@ -305,6 +307,35 @@ Validation triggers when other validation in input are valid and after user stop
              placeholder="remoteValidation"
              value="test"
              remote-validation="remoteValidation.json?value=:value"
+             remote-validation-map-data="{ value:ValidationForm.remoteValidation11 }"
+             ng-required="true"
+             class="form-control">
+
+      <valid-icon></valid-icon>
+      <loader-icon></loader-icon>
+      <error-message class="ng-required">Field is required</error-message>
+      <error-message class="remote-validation">Remote Error</error-message>
+
+    </form-control>
+  </div>
+</form>
+```
+
+##### Example Email remote validation
+
+```html
+<form name="ValidationForm">
+  <div class="row">
+    <form-control class="col-md-6">
+      <label for="remoteValidation11">remoteValidation</label>
+      <input name="remoteValidation"
+             id="remoteValidation11"
+             ng-model="ValidationForm.remoteValidation11"
+             autocomplete="remoteValidation"
+             type="text"
+             placeholder="remoteValidation"
+             value="test"
+             remote-validation="http://isemail.info/valid/:value"
              remote-validation-map-data="{ value:ValidationForm.remoteValidation11 }"
              ng-required="true"
              class="form-control">

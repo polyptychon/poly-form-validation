@@ -1,11 +1,11 @@
 {
   "name": "poly-form-validation",
   "homepage": "https://github.com/polyptychon/poly-form-validation",
-  "_release": "a9d5e0a21f",
+  "_release": "cf5bef6d40",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "a9d5e0a21f007cb8032ffad5b6f55e04ebdaf327"
+    "commit": "cf5bef6d40a134c302680fb7588bc26fcd35a560"
   },
   "_source": "git://github.com/polyptychon/poly-form-validation.git",
   "_target": "*",
