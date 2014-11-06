@@ -238,19 +238,19 @@ Group a form control with other validation elements. Copies all ng classes from 
 
 Use it inside `<form-control>` to display error messages. You must add a class with the same name of angular validation directives. `<error-message class="ng-required">`. Error message show only when input has class `ng-dirty ng-invalid`.
 
-| Classes           |
-| :---------------- |
-| ng-required       |
-| ng-minlength      |
-| ng-maxlength      |
-| ng-pattern        |
-| ng-email          |
-| ng-number         |
-| ng-url            |
-| remote-validation |
-| ui-validate       |
-| is-unique         |
-| is-equal          |
+| Classes           |  Provider   |
+| :---------------- | :---------  |
+| ng-required       | Angular     |
+| ng-minlength      | Angular     |
+| ng-maxlength      | Angular     |
+| ng-pattern        | Angular     |
+| ng-email          | Angular     |
+| ng-number         | Angular     |
+| ng-url            | Angular     |
+| remote-validation | custom      |
+| ui-validate       | Angular-ui  |
+| is-unique         | custom      |
+| is-equal          | custom      |
 
 
 ### popover
