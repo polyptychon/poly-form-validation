@@ -41,7 +41,7 @@ module.exports = ($timeout, $http) ->
 
         timeoutPromise = $timeout(
           () ->
-            url = mapDataToURL(attrs.remoteValidation, attrs.remoteValidationMapData, scope.$parent)
+            url = mapDataToURL(attrs.remoteValidation, attrs.remoteValidationMapData, scope)
             dataType = attrs.remoteValidationDataType || "json"
 
             if (dataType == "jsonp")
