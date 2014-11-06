@@ -257,7 +257,7 @@ You can add custom validation classes.
 ##### Example
 
 ```css
-.has-feedback.ng-dirty .ng-invalid-custom-validation > .custom-validation,
+.has-feedback.ng-dirty.ng-invalid-custom-validation > .custom-validation,
   display: block;
 }
 ```
