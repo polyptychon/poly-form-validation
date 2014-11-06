@@ -258,14 +258,14 @@ Use it to display bootstrap popover. http://getbootstrap.com/javascript/#popover
     <form-control class="col-md-6">
       <label for="validatePassword0">password</label>
       <input name="validatePassword"
-          id="validatePassword0"
-          ng-model="ValidationForm.validatePasswordValue"
-          autocomplete="validatePassword"
-          type="password"
-          placeholder="password"
-          value="test"
-          ng-required="true"
-          class="form-control">
+             id="validatePassword0"
+             ng-model="ValidationForm.validatePasswordValue"
+             autocomplete="validatePassword"
+             type="password"
+             placeholder="password"
+             value="test"
+             ng-required="true"
+             class="form-control">
       <popover>Please type a password</popover>
       <valid-icon></valid-icon>
       <loader-icon></loader-icon>
