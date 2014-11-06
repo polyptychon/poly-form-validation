@@ -248,7 +248,7 @@ Use it inside `<form-control>` to display error messages. You must add a class w
 | ng-number         | Angular     |
 | ng-url            | Angular     |
 | ui-validate       | Angular-ui  |
-| remote-validation | custom      |
+| remote-validation | Polyptychon |
 
 You can add custom validation classes.
 
