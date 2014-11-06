@@ -320,32 +320,3 @@ Validation triggers when other validation in input are valid and after user stop
   </div>
 </form>
 ```
-
-##### Example Email remote validation
-
-```html
-<form name="ValidationForm">
-  <div class="row">
-    <form-control class="col-md-6">
-      <label for="remoteValidation11">remoteValidation</label>
-      <input name="remoteValidation"
-             id="remoteValidation11"
-             ng-model="ValidationForm.remoteValidation11"
-             autocomplete="remoteValidation"
-             type="text"
-             placeholder="remoteValidation"
-             value="test"
-             remote-validation="http://isemail.info/valid/:value"
-             remote-validation-map-data="{ value:ValidationForm.remoteValidation11 }"
-             ng-required="true"
-             class="form-control">
-
-      <valid-icon></valid-icon>
-      <loader-icon></loader-icon>
-      <error-message class="ng-required">Field is required</error-message>
-      <error-message class="remote-validation">Remote Error</error-message>
-
-    </form-control>
-  </div>
-</form>
-```
