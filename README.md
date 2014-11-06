@@ -252,6 +252,16 @@ Use it inside `<form-control>` to display error messages. You must add a class w
 | is-unique         | custom      |
 | is-equal          | custom      |
 
+You can add custom validation classes.
+
+##### Example
+
+```css
+.ng-dirty .ng-invalid-custom-validation > .custom-validation,
+  display: block;
+}
+```
+
 
 ### popover
 
