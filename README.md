@@ -249,8 +249,6 @@ Use it inside `<form-control>` to display error messages. You must add a class w
 | ng-url            | Angular     |
 | ui-validate       | Angular-ui  |
 | remote-validation | custom      |
-| is-unique         | custom      |
-| is-equal          | custom      |
 
 You can add custom validation classes.
 
