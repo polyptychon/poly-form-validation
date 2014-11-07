@@ -233,6 +233,34 @@ Group a form control with other validation elements. Copies all ng classes from 
   </div>
 </form>
 ```
+
+### errorMessages
+
+Use it inside `<form-control>` to display error messages. You must add a class with the same name of angular validation directives. `<error-message class="ng-required">`. Error message show only when input has class `ng-dirty ng-invalid`.
+
+| Classes           |  Provider   |
+| :---------------- | :---------  |
+| ng-required       | Angular     |
+| ng-minlength      | Angular     |
+| ng-maxlength      | Angular     |
+| ng-pattern        | Angular     |
+| ng-email          | Angular     |
+| ng-number         | Angular     |
+| ng-url            | Angular     |
+| ui-validate       | Angular-ui  |
+| remote-validation | Polyptychon |
+
+You can add custom validation classes.
+
+##### Example
+
+```css
+.has-feedback.ng-dirty.ng-invalid-custom-validation > .custom-validation,
+  display: block;
+}
+```
+
+
 ### popover
 
 Use it to display bootstrap popover. http://getbootstrap.com/javascript/#popovers
@@ -258,14 +286,14 @@ Use it to display bootstrap popover. http://getbootstrap.com/javascript/#popover
     <form-control class="col-md-6">
       <label for="validatePassword0">password</label>
       <input name="validatePassword"
-          id="validatePassword0"
-          ng-model="ValidationForm.validatePasswordValue"
-          autocomplete="validatePassword"
-          type="password"
-          placeholder="password"
-          value="test"
-          ng-required="true"
-          class="form-control">
+             id="validatePassword0"
+             ng-model="ValidationForm.validatePasswordValue"
+             autocomplete="validatePassword"
+             type="password"
+             placeholder="password"
+             value="test"
+             ng-required="true"
+             class="form-control">
       <popover>Please type a password</popover>
       <valid-icon></valid-icon>
       <loader-icon></loader-icon>
@@ -289,6 +317,7 @@ Validation triggers when other validation in input are valid and after user stop
 | remote-validation-quiet-millis       | Number  | 500     | How much time after user stops typing to trigger validation |
 | remote-validation-data-type          | String  | 'json'  | JSON or JSONP |
 | remote-validation-is-valid-path      | String  | ''      | In the returned JSON object we can specify the path to validation boolean value |
+| remote-validation-is-valid-test-regx | String  | null    | Test a regular expression against return value |
 | remote-validation-error-message-path | String  | ''      | In the returned JSON object we can specify the path to error message |
 
 
@@ -310,18 +339,16 @@ Validation triggers when other validation in input are valid and after user stop
              remote-validation-map-data="{ value:ValidationForm.remoteValidation11 }"
              ng-required="true"
              class="form-control">
-
       <valid-icon></valid-icon>
       <loader-icon></loader-icon>
       <error-message class="ng-required">Field is required</error-message>
       <error-message class="remote-validation">Remote Error</error-message>
-
     </form-control>
   </div>
 </form>
 ```
 
-##### Example Email remote validation
+##### Example Regx
 
 ```html
 <form name="ValidationForm">
@@ -330,22 +357,34 @@ Validation triggers when other validation in input are valid and after user stop
       <label for="remoteValidation11">remoteValidation</label>
       <input name="remoteValidation"
              id="remoteValidation11"
-             ng-model="ValidationForm.remoteValidation11"
-             autocomplete="remoteValidation"
+             class="form-control"
              type="text"
-             placeholder="remoteValidation"
-             value="test"
-             remote-validation="http://isemail.info/valid/:value"
-             remote-validation-map-data="{ value:ValidationForm.remoteValidation11 }"
+             ng-model="ValidationForm.remoteValidation11"
              ng-required="true"
-             class="form-control">
-
+             remote-validation="http://isemail.info/jsonp=JSON_CALLBACK/:value"
+             remote-validation-map-data="{value:ValidationForm.remoteValidation11}"
+             remote-validation-data-type="jsonp"
+             remote-validation-error-message-path="diagnosis"
+             remote-validation-is-valid-path="diagnosis"
+             remote-validation-is-valid-test-regx="/Address is valid/gi">
       <valid-icon></valid-icon>
       <loader-icon></loader-icon>
       <error-message class="ng-required">Field is required</error-message>
       <error-message class="remote-validation">Remote Error</error-message>
-
     </form-control>
   </div>
 </form>
+```
+
+```json
+{
+  "address":"test@example.com",
+  "diagnosis":"Couldn't find an MX record for this domain but an A-record does exist",
+  "constant":"ISEMAIL_DNSWARN_NO_MX_RECORD",
+  "category":"Address is valid but a DNS check was not successful",
+  "categoryconstant":"ISEMAIL_DNSWARN",
+  "smtp":"250 2.1.5 ok",
+  "numeric":5,
+  "reference":""
+}
 ```
