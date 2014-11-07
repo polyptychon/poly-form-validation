@@ -9,11 +9,15 @@ module.exports = ($timeout, $http) ->
     formControl = ctrls[1]
     timeoutPromise = null
     timeoutDigest = -1
-    quietMillis = if (attrs.remoteValidationQuietMillis != null && !isNaN(attrs.remoteValidationQuietMillis)) then attrs.remoteValidationQuietMillis else 500
+    quietMillis = attrs.remoteValidationQuietMillis
+    quietMillis = if (quietMillis != null && !isNaN(quietMillis)) then attrs.remoteValidationQuietMillis else 500
+    remoteValidationDataType = attrs.remoteValidationDataType
+    remoteValidationMapData = attrs.remoteValidationMapData
     isValidPath = attrs.remoteValidationIsValidPath || null
     errorMessagePath = attrs.remoteValidationErrorMessagePath || null
     remoteValidation = attrs.remoteValidation || ""
     remoteValidationIsValidTestRegx = attrs.remoteValidationIsValidTestRegx
+
     name = "remote-validation"
 
     scope.$watch(
