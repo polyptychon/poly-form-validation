@@ -317,6 +317,7 @@ Validation triggers when other validation in input are valid and after user stop
 | remote-validation-quiet-millis       | Number  | 500     | How much time after user stops typing to trigger validation |
 | remote-validation-data-type          | String  | 'json'  | JSON or JSONP |
 | remote-validation-is-valid-path      | String  | ''      | In the returned JSON object we can specify the path to validation boolean value |
+| remote-validation-is-valid-test-regx | String  | null    | Test a regular expression against return value |
 | remote-validation-error-message-path | String  | ''      | In the returned JSON object we can specify the path to error message |
 
 
@@ -347,4 +348,45 @@ Validation triggers when other validation in input are valid and after user stop
     </form-control>
   </div>
 </form>
+```
+
+##### Example Regx
+
+```html
+<form name="ValidationForm">
+  <div class="row">
+    <form-control class="col-md-6">
+      <label for="remoteValidation11">remoteValidation</label>
+      <input name="remoteValidation"
+             id="remoteValidation11"
+             type="text"
+             ng-required="true"
+             remote-validation="http://isemail.info/jsonp=JSON_CALLBACK/:value"
+             remote-validation-map-data="{value:ValidationForm.remoteValidation11}"
+             remote-validation-data-type="jsonp"
+             remote-validation-error-message-path="category"
+             remote-validation-is-valid-path="category"
+             remote-validation-is-valid-test-regx="/Address is valid/gi"
+             ng-model="ValidationForm.remoteValidation11"
+             class="form-control">
+      <valid-icon></valid-icon>
+      <loader-icon></loader-icon>
+      <error-message class="ng-required">Field is required</error-message>
+      <error-message class="remote-validation">Remote Error</error-message>
+    </form-control>
+  </div>
+</form>
+```
+
+```json
+{
+  "address":"test@example.com",
+  "diagnosis":"Couldn't find an MX record for this domain but an A-record does exist",
+  "constant":"ISEMAIL_DNSWARN_NO_MX_RECORD",
+  "category":"Address is valid but a DNS check was not successful",
+  "categoryconstant":"ISEMAIL_DNSWARN",
+  "smtp":"250 2.1.5 ok",
+  "numeric":5,
+  "reference":""
+}
 ```
