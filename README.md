@@ -316,7 +316,7 @@ Validation triggers when other validation in input are valid and after user stop
 | remote-validation-map-data           | Object  | ''      | Mapping data from an object to url. See example bellow |
 | remote-validation-quiet-millis       | Number  | 500     | How much time after user stops typing to trigger validation |
 | remote-validation-data-type          | String  | 'json'  | JSON or JSONP |
-| remote-validation-is-valid-path      | String  | ''      | In the returned JSON object we can specify the path to validation boolean value |
+| remote-validation-is-valid-path      | String  | ''      | In the returned JSON object we can specify the path to validation |
 | remote-validation-is-valid-test-regx | String  | null    | Test a regular expression against return value |
 | remote-validation-error-message-path | String  | ''      | In the returned JSON object we can specify the path to error message |
 
