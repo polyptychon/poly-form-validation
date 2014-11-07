@@ -10,7 +10,7 @@ module.exports = ($timeout, $http) ->
     timeoutPromise = null
     timeoutDigest = -1
     quietMillis = attrs.remoteValidationQuietMillis
-    quietMillis = if (quietMillis != null && !isNaN(quietMillis)) then attrs.remoteValidationQuietMillis else 500
+    quietMillis = if (quietMillis != null && !isNaN(quietMillis)) then quietMillis else 500
     remoteValidationDataType = attrs.remoteValidationDataType
     remoteValidationMapData = attrs.remoteValidationMapData
     isValidPath = attrs.remoteValidationIsValidPath || null
