@@ -359,6 +359,7 @@ Validation triggers when other validation in input are valid and after user stop
       <label for="remoteValidation11">remoteValidation</label>
       <input name="remoteValidation"
              id="remoteValidation11"
+             class="form-control"
              type="text"
              ng-model="ValidationForm.remoteValidation11"
              ng-required="true"
@@ -367,8 +368,7 @@ Validation triggers when other validation in input are valid and after user stop
              remote-validation-data-type="jsonp"
              remote-validation-error-message-path="category"
              remote-validation-is-valid-path="category"
-             remote-validation-is-valid-test-regx="/Address is valid/gi"
-             class="form-control">
+             remote-validation-is-valid-test-regx="/Address is valid/gi">
       <valid-icon></valid-icon>
       <loader-icon></loader-icon>
       <error-message class="ng-required">Field is required</error-message>
