@@ -364,8 +364,8 @@ Validation triggers when other validation in input are valid and after user stop
              remote-validation="http://isemail.info/jsonp=JSON_CALLBACK/:value"
              remote-validation-map-data="{value:ValidationForm.remoteValidation11}"
              remote-validation-data-type="jsonp"
-             remote-validation-error-message-path="category"
-             remote-validation-is-valid-path="category"
+             remote-validation-error-message-path="diagnosis"
+             remote-validation-is-valid-path="diagnosis"
              remote-validation-is-valid-test-regx="/Address is valid/gi">
       <valid-icon></valid-icon>
       <loader-icon></loader-icon>
