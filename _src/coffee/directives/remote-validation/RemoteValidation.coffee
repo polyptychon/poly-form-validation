@@ -45,11 +45,12 @@ module.exports = ($timeout, $http) ->
             dataType = attrs.remoteValidationDataType || "json"
 
             if (dataType == "jsonp")
-              if (url.indexOf("?") < 0)
-                url += "?callback=JSON_CALLBACK"
-              else
-                if (url.indexOf("callback=JSON_CALLBACK") < 0)
-                  url = url.replace(/\?/gi, "?callback=JSON_CALLBACK&")
+              if (url.indexOf("callback=JSON_CALLBACK") < 0 && url.indexOf("jsonp=JSON_CALLBACK") < 0)
+                if (url.indexOf("?") < 0)
+                  url += "?callback=JSON_CALLBACK"
+                else
+                  if (url.indexOf("callback=JSON_CALLBACK") < 0)
+                    url = url.replace(/\?/gi, "?callback=JSON_CALLBACK&")
 
               $http.jsonp(url).success((response) ->
                 onSuccess(response)
@@ -90,7 +91,14 @@ module.exports = ($timeout, $http) ->
                 return unless (data?)
                 isValid = getObjectFromPath(data, isValidPath)
                 errorMessage = getObjectFromPath(data, errorMessagePath)
-                $(elm).parent().find(".error-message.remote-validation").html(errorMessage) if isValid!=true
+                if attrs.remoteValidationIsValidTestRegx?
+                  flags = attrs.remoteValidationIsValidTestRegx.replace(/.*\/([gimy]*)$/, '$1');
+                  pattern = attrs.remoteValidationIsValidTestRegx.replace(new RegExp('^/(.*?)/'+flags+'$'), '$1');
+                  regex = new RegExp(pattern, flags);
+                  isValid = regex.test(isValid)
+                else
+                  isValid = isValid==true
+                $(elm).parent().find(".error-message.remote-validation").html(errorMessage)
                 validatorFn(newValue, isValid==true)
                 update()
 
