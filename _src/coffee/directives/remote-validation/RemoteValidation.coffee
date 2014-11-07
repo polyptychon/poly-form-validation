@@ -12,6 +12,8 @@ module.exports = ($timeout, $http) ->
     quietMillis = if (attrs.remoteValidationQuietMillis != null && !isNaN(attrs.remoteValidationQuietMillis)) then attrs.remoteValidationQuietMillis else 500
     isValidPath = attrs.remoteValidationIsValidPath || null
     errorMessagePath = attrs.remoteValidationErrorMessagePath || null
+    remoteValidation = attrs.remoteValidation || ""
+    remoteValidationIsValidTestRegx = attrs.remoteValidationIsValidTestRegx
     name = "remote-validation"
 
     scope.$watch(
@@ -30,7 +32,7 @@ module.exports = ($timeout, $http) ->
         $timeout.cancel(timeoutPromise)
         elm.removeClass("ng-#{name}-error-loading")
 
-        if (!newValue? || newValue.length < 2 || attrs.remoteValidation == "" || attrs.remoteValidation.length < 2)
+        if (!newValue? || newValue.length < 2 || remoteValidation == "" || remoteValidation.length < 2)
           elm.removeClass("ng-#{name}-loading")
           elm.removeClass("ng-loading")
           return
@@ -41,8 +43,8 @@ module.exports = ($timeout, $http) ->
 
         timeoutPromise = $timeout(
           () ->
-            url = mapDataToURL(attrs.remoteValidation, attrs.remoteValidationMapData, scope)
-            dataType = attrs.remoteValidationDataType || "json"
+            url = mapDataToURL(remoteValidation, remoteValidationMapData, scope)
+            dataType = remoteValidationDataType || "json"
 
             if (dataType == "jsonp")
               if (url.indexOf("callback=JSON_CALLBACK") < 0 && url.indexOf("jsonp=JSON_CALLBACK") < 0)
@@ -91,9 +93,9 @@ module.exports = ($timeout, $http) ->
                 return unless (data?)
                 isValid = getObjectFromPath(data, isValidPath)
                 errorMessage = getObjectFromPath(data, errorMessagePath)
-                if attrs.remoteValidationIsValidTestRegx?
-                  flags = attrs.remoteValidationIsValidTestRegx.replace(/.*\/([gimy]*)$/, '$1');
-                  pattern = attrs.remoteValidationIsValidTestRegx.replace(new RegExp('^/(.*?)/'+flags+'$'), '$1');
+                if remoteValidationIsValidTestRegx?
+                  flags = remoteValidationIsValidTestRegx.replace(/.*\/([gimy]*)$/, '$1');
+                  pattern = remoteValidationIsValidTestRegx.replace(new RegExp('^/(.*?)/'+flags+'$'), '$1');
                   regex = new RegExp(pattern, flags);
                   isValid = regex.test(isValid)
                 else
