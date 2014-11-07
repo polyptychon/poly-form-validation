@@ -339,12 +339,10 @@ Validation triggers when other validation in input are valid and after user stop
              remote-validation-map-data="{ value:ValidationForm.remoteValidation11 }"
              ng-required="true"
              class="form-control">
-
       <valid-icon></valid-icon>
       <loader-icon></loader-icon>
       <error-message class="ng-required">Field is required</error-message>
       <error-message class="remote-validation">Remote Error</error-message>
-
     </form-control>
   </div>
 </form>
