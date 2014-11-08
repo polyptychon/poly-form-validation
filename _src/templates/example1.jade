@@ -112,5 +112,25 @@ html(ng-app="poly-form-validation")
                   error-message.ng-required Field is required
                   error-message.remote-validation Remote Error
 
+                form-control.col-md-6
+                  label(for="remoteValidation12") remoteValidation Github username
+                  input(name="remoteValidation"
+                    id="remoteValidation12"
+                    autocomplete="remoteValidation"
+                    type="text"
+                    placeholder="remoteValidation Github username"
+                    value="test"
+                    ng-required="true"
+                    class="form-control"
+                    remote-validation="https://api.github.com/users/:value"
+                    remote-validation-map-data="{value:ValidationForm.remoteValidation12}"
+                    remote-validation-is-valid-path="type"
+                    remote-validation-is-valid-test-regx="/User/gi"
+                    ng-model="ValidationForm.remoteValidation12"
+                  )
+                  valid-icon
+                  loader-icon
+                  error-message.ng-required Field is required
+                  error-message.remote-validation Github user not found
 
     include partials/footer

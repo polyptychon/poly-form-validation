@@ -110,8 +110,11 @@ module.exports = ($timeout, $http) ->
 
             onError =
               () ->
+                elm.removeClass("ng-#{name}-pending")
+                elm.removeClass("ng-#{name}-loading")
+                elm.removeClass("ng-loading")
                 elm.addClass("ng-#{name}-error-loading")
-                validatorFn(newValue, true);
+                validatorFn(newValue, false);
                 update()
 
             onDefault =
