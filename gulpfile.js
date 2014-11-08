@@ -28,7 +28,6 @@ var gulp = require('gulp'),
 
     karma = require('gulp-karma'),
     source = require('vinyl-source-stream'),
-    glob = require('glob'),
     coffee = require('coffee-script'),
 
     duration = require('gulp-duration'),
