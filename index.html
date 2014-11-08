@@ -91,6 +91,8 @@
                   <error-message class="is-uinique">Please type a unique name</error-message>
                   <error-message class="ng-required">Field is required</error-message>
                 </form-control>
+              </div>
+              <div class="col-md-12">
                 <form-control class="col-md-6">
                   <label for="remoteValidation11">remoteValidation Email service</label>
                   <input name="remoteValidation"
@@ -110,6 +112,26 @@
                   <loader-icon></loader-icon>
                   <error-message class="ng-required">Field is required</error-message>
                   <error-message class="remote-validation">Remote Error</error-message>
+                </form-control>
+                <form-control class="col-md-6">
+                  <label for="remoteValidation12">remoteValidation Github username</label>
+                  <input name="remoteValidation"
+                         id="remoteValidation12"
+                         autocomplete="remoteValidation"
+                         class="form-control"
+                         type="text"
+                         placeholder="remoteValidation Github username"
+                         value="test"
+                         ng-required="true"
+                         remote-validation="https://api.github.com/users/:value"
+                         remote-validation-map-data="{value:ValidationForm.remoteValidation12}"
+                         remote-validation-is-valid-path="type"
+                         remote-validation-is-valid-test-regx="/User/gi"
+                         ng-model="ValidationForm.remoteValidation12">
+                  <valid-icon></valid-icon>
+                  <loader-icon></loader-icon>
+                  <error-message class="ng-required">Field is required</error-message>
+                  <error-message class="remote-validation">Github user not found</error-message>
                 </form-control>
               </div>
             </div>

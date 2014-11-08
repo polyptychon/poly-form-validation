@@ -1,6 +1,0 @@
-.form-container.row
-  h1.form-tabs-header
-    ul(id="formTablist", class="breadcrumb", role="tablist")
-      li(ng-repeat="pane in panes", ng-class="{active:pane.selected, disabled:pane.disabled }")
-        a(href="javascript:" ng-click="select(pane)") {{pane.tabTitle}}
-  .tab-content(ng-transclude)
