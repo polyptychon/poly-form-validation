@@ -1,0 +1,209 @@
+$gray-base:              #000 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
+$gray:                   lighten($gray-base, 33.5%) !default; // #555
+$gray-light:             lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+
+$state-success-text:     #3c763d !default;
+$state-danger-text:      #a94442 !default;
+
+$brand-primary:          #428bca !default;
+$brand-danger:           #d9534f !default;
+
+$font-size-base: 14px !default;
+$line-height-base: 1.428571429 !default; // 20/14
+$padding-base-vertical: 6px !default;
+$line-height-computed: floor(($font-size-base * $line-height-base)) !default; // ~20px
+$input-height-base: ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+
+@import "spinner";
+
+.ng-animate-block-transitions {
+  transition:0s all!important;
+  -webkit-transition:0s all!important;
+}
+
+/* show the element during a show/hide animation when the
+ * animation is ongoing, but the .ng-hide class is active */
+.ng-hide-add-active, .ng-hide-remove {
+  display: block!important;
+}
+
+.popover.top {
+  margin-top: -25px;
+}
+.app-form-help-block {
+
+  font-size : 12px;
+  margin-bottom: 20px;
+
+}
+.has-feedback {
+  .form-control-feedback {
+    top: $input-height-base * .68;
+    right: 20px;
+    display: none;
+    z-index: 20;
+  }
+  &.no-label {
+    .form-control-feedback {
+      top: 0px;
+    }
+  }
+  &.select {
+    .form-control-feedback {
+      right: 30px;
+    }
+    &:not(.select-multiple).select-clear .form-control-feedback {
+      right: 50px;
+    }
+    &:not(.select-multiple).select-clear .loader {
+      right: 55px;
+    }
+  }
+  &.select-multiple {
+    .form-control-feedback {
+      right: 20px;
+    }
+  }
+  .form-control {
+    padding-right: 12px;
+  }
+  &.has-success {
+    .form-control-feedback {
+      display: block;
+    }
+    .form-control:not(.select2-container) {
+      padding-right: 42.5px;
+    }
+  }
+  &:not(.ng-loading) .loader {
+    display: none;
+  }
+  &.ng-loading .valid-icon {
+    display: none;
+  }
+  .error-message {
+    display: none;
+    margin-top: 5px;
+    color: $brand-danger;
+  }
+  &.ng-dirty {
+    &.ng-invalid-required > .ng-required,
+    &.ng-invalid-validator > .ui-validate,
+    &.ng-invalid-pattern > .ng-pattern,
+    &.ng-invalid-email > .ng-email,
+    &.ng-invalid-number > .ng-number,
+    &.ng-invalid-maxlength > .ng-maxlength,
+    &.ng-invalid-minlength > .ng-minlength,
+    &.ng-invalid-url > .ng-url,
+    &.ng-invalid-is-unique > .is-unique,
+    &.ng-is-unique-loading > .is-unique-loading,
+    &.ng-is-unique-error-loading > .is-unique-error-loading,
+    &.ng-invalid-remote-validation > .remote-validation,
+    &.ng-remote-validation-loading > .remote-validation-loading,
+    &.ng-remote-validation-error-loading > .remote-validation-error-loading,
+    &.ng-loading > .loader,
+    &.ng-invalid-is-equal > .is-equal {
+      display: block;
+    }
+    //&.has-success > .loader,
+    &.ng-remote-validation-pending > .remote-validation,
+    &.ng-remote-validation-loading > .remote-validation,
+    &.ng-is-unique-pending > .is-unique,
+    &.ng-is-unique-loading > .is-unique {
+      display: none;
+    }
+    input:focus.ng-valid {
+      border-color: $state-success-text;
+    }
+    input:focus.ng-invalid {
+      border-color: $state-danger-text;
+    }
+  }
+}
+
+.form-container h1.form-tabs-header {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  font-size: 18px;
+  background: $gray-dark;
+  color: white;
+  padding: 10px 30px;
+  margin: 0px;
+  z-index: 2;
+  font-weight: normal;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -5px;
+    width: 10px;
+    height: 10px;
+    background: $brand-primary;
+    display: block;
+    transform: skewY(30deg);
+    z-index: 1;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 10px;
+    height: 10px;
+    background: $gray-dark;
+    display: block;
+    z-index: 2;
+  }
+  ul {
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
+.form-container {
+  background: $gray-lighter;
+  padding: 20px 20px;
+  padding-top: 80px;
+  margin-bottom: 40px;
+  position: relative;
+  .form-tabs-header {
+    .breadcrumb {
+      background: $gray-dark;
+      border-radius: 0px;
+      a {
+        color: $gray;
+      }
+      .active a {
+        color: white;
+      }
+
+    }
+
+    [role="tablist"] {
+      li.disabled a {
+        pointer-events: none;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  label {
+    font-weight: normal;
+  }
+
+  :not(.pen) > h2.form-header {
+    font-size: 14px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-weight: bold;
+    border-bottom: 1px solid $gray-light;
+  }
+}
