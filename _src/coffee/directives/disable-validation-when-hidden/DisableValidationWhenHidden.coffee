@@ -5,9 +5,7 @@ requestAnimFrame = require "animationframe"
 module.exports = () ->
   restrict: 'A'
   require: ['^form', '?^formTab']
-  scope:
-    isUniqueQuietMillis: '@'
-    isUniqueMapData: '@'
+  scope: {}
   link: (scope, elm, attrs, ctrls) ->
     form = ctrls[0]
     formTab = ctrls[1]
