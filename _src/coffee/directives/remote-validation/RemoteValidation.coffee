@@ -96,7 +96,7 @@ module.exports = ($timeout, $http) ->
                 elm.removeClass("ng-#{name}-error-loading")
                 return unless (data?)
                 isValid = getObjectFromPath(data, isValidPath)
-                errorMessage = getObjectFromPath(data, errorMessagePath)
+                errorMessage = getObjectFromPath(data, errorMessagePath) if errorMessagePath?
                 if remoteValidationIsValidTestRegx?
                   flags = remoteValidationIsValidTestRegx.replace(/.*\/([gimy]*)$/, '$1');
                   pattern = remoteValidationIsValidTestRegx.replace(new RegExp('^/(.*?)/'+flags+'$'), '$1');
@@ -104,6 +104,7 @@ module.exports = ($timeout, $http) ->
                   isValid = regex.test(isValid)
                 else
                   isValid = isValid==true
+
                 $(elm).parent().find(".error-message.remote-validation").html(errorMessage)
                 validatorFn(newValue, isValid==true)
                 update()
