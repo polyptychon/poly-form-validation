@@ -1,0 +1,15 @@
+form(name="testForm")
+  form-control.col-md-6
+    label(for="email2") Text
+    input(
+      name=options.name
+      id="test"
+      class="form-control"
+      type=options.type
+      value=options.value
+      ng-model=options.model
+      ng-required="true"
+    )
+    valid-icon
+    error-message.ng-email Please type a correct email
+    error-message.ng-required Field is required
