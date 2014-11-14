@@ -11,5 +11,6 @@ form(name="testForm")
       ng-required="true"
     )
     valid-icon
-    error-message.ng-email Please type a correct email
+    if options.type=="email"
+      error-message.ng-email Please type a correct email
     error-message.ng-required Field is required
