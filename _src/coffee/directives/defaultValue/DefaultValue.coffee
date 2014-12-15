@@ -13,18 +13,20 @@ module.exports = ($parse) ->
       if attrs.type=="select2-input" || attrs.uiSelect2?
         requestAnimFrame(() ->
           requestAnimFrame(()->
-            if attrs.multiple? && attrs.multiple == true
-              values = []
-              a = attrs.value.split(",")
-              angular.forEach(a, (item) ->
-                values.push({id: item, text: item})
-              )
-              $(element).select2("data", values)
-            else
-              $(element).select2("data", {id: attrs.value, text:attrs.value})
+            requestAnimFrame(()->
+              if attrs.multiple? && attrs.multiple == true
+                values = []
+                a = attrs.value.split(",")
+                angular.forEach(a, (item) ->
+                  values.push({id: item, text: item})
+                )
+                $(element).select2("data", values)
+              else
+                $(element).select2("data", {id: attrs.value, text:attrs.value})
 
-            requestAnimFrame(() ->
-              element.trigger("change")
+              requestAnimFrame(() ->
+                element.trigger("change")
+              )
             )
           )
         )

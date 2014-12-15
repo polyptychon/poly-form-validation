@@ -114,7 +114,7 @@ module.exports = () ->
           )
 
           nextPane.disabled = $scope.isPaneInvalid if (nextPane)
-          $scope.$digest()
+          $scope.$apply()
 
           return $scope.isPaneInvalid
 
