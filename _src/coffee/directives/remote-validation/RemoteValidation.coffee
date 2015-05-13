@@ -105,7 +105,7 @@ module.exports = ($timeout, $http) ->
                 else
                   isValid = isValid==true
 
-                $(elm).parent().find(".error-message.remote-validation").html(errorMessage)
+                $(formControl.element).find(".error-message.remote-validation").html(errorMessage)
                 validatorFn(newValue, isValid==true)
                 update()
 
